@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karigar & Co. | Handcrafted Goods from Delhi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #8C4C33;
+      --accent: #E8B888;
+      --light: #f9f6f1;
+      --text: #2e2e2e;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: var(--light);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1611309454929-b73e775bc5d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1650&q=80') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.4);
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+    header p {
+      font-size: 1.3rem;
+    }
+    nav {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      margin: 0 1.2rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: var(--primary);
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .intro h2 {
+      font-size: 2.5rem;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card .info {
+      padding: 1rem;
+    }
+    .card .info h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .card .info p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .contact {
+      text-align: center;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: auto;
+      display: grid;
+      gap: 1rem;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      padding: 1rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    @media(max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      nav {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Karigar & Co.</h1>
+  <p>Artisan Goods from the Heart of Delhi</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#shop">Shop</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <div class="intro">
+    <h2>Our Story</h2>
+    <p>Located in Shahpur Jat, Karigar & Co. brings together the age-old craftsmanship of Indian artisans with a modern aesthetic. Every product in our boutique is handpicked and handmade — telling a story of culture, design, and sustainability.</p>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="intro">
+    <h2>Shop Our Collection</h2>
+    <p>Each item is made with love, crafted by hand, and tells a story.</p>
+  </div>
+  <div class="products">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1606842005543-72b6a1c3e3cd" alt="Handmade Candle">
+      <div class="info">
+        <h4>Soy Wax Candle</h4>
+        <p>Infused with essential oils. Slow burn, handcrafted in Delhi.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2" alt="Block Printed Scarf">
+      <div class="info">
+        <h4>Block-Printed Scarf</h4>
+        <p>Made using traditional hand-block techniques on organic cotton.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2" alt="Ceramic Plate">
+      <div class="info">
+        <h4>Ceramic Tableware</h4>
+        <p>Wheel-thrown and hand-glazed in soft tones. Functional and beautiful.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1616627986634-dc3d6e84bdb3" alt="Handwoven Journal">
+      <div class="info">
+        <h4>Handwoven Journal</h4>
+        <p>Recycled paper with khadi fabric cover. Perfect for everyday musings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="intro">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you. Drop us a message or visit us in Shahpur Jat.</p>
+  </div>
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 Karigar & Co. | Built with ❤️ in Delhi NCR</p>
+</footer>
+
+</body>
+</html>
